@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Koneksi MySQL</title>
+</head>
+<body>
+
+<h3>Test Koneksi MySQL via PHP</h3>
+
+<button onclick="loadData()">Load Data</button>
+
+<pre id="result"></pre>
+
+<script>
+function loadData(){
+  fetch('get_data.php')
+    .then(r => r.text())
+    .then(d => document.getElementById('result').innerText = d);
+}
+</script>
+
+</body>
+</html>
